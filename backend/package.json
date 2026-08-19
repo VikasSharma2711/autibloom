@@ -1,0 +1,12 @@
+{
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node ../tests/phase5_integrity.mjs && node ../tests/phase6_auth_integrity.mjs && node ../tests/phase7_integrity.mjs && node ../tests/phase8_report_integrity.mjs && node ../tests/phase9_integrity.mjs && node ../tests/phase10_integrity.mjs && node ../tests/phase11_integrity.mjs && node ../tests/phase13_2_auth_signup.mjs && node ../tests/phase13_3_email_auth.mjs && node ../tests/phase13_4_security_hardening.mjs && node ../tests/phase13_5_mfa_integrity.mjs"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "pg": "^8.16.0",
+    "bcryptjs": "^3.0.2"
+  }
+}

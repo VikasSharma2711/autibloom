@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const server=fs.readFileSync(new URL("../backend/server.js",import.meta.url),"utf8");
+const schema=fs.readFileSync(new URL("../database/schema.sql",import.meta.url),"utf8");
+const parent=fs.readFileSync(new URL("../app/parent.html",import.meta.url),"utf8");
+const app=fs.readFileSync(new URL("../app/index.html",import.meta.url),"utf8");
+for(const x of ["/api/v1/auth/register","If the account is eligible, verification instructions will be sent to this email address.","bcrypt.hash(password,12)","role,is_active","/api/v1/parent/auth/register","parent_users"]) assert(server.includes(x));
+assert(schema.includes("ADD COLUMN IF NOT EXISTS is_active BOOLEAN NOT NULL DEFAULT TRUE"));
+for(const x of ["Create therapist account","/api/v1/auth/register","signupPassword","showSignup"]) assert(app.includes(x));
+for(const x of ["Parent sign in","Create parent account","/api/v1/parent/auth/register","/api/v1/parent/auth/login"]) assert(parent.includes(x));
+console.log("PHASE 13.2 AUTH SIGNUP INTEGRITY PASSED");

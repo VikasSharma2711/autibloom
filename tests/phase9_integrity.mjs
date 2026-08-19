@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const root=new URL('..',import.meta.url);
+const matrix=fs.readFileSync(new URL('../clinical/AUTIBLOOM_Scoring_Matrix_V1.csv',import.meta.url),'utf8').replace(/^\uFEFF/,'');
+assert.equal(matrix.trim().split(/\r?\n/).length-1,121,'Clinical matrix must contain 121 items');
+assert.match(fs.readFileSync(new URL('../database/schema.sql',import.meta.url),'utf8'),/parent_sessions/);
+assert.match(fs.readFileSync(new URL('../database/schema.sql',import.meta.url),'utf8'),/report_delivery_tokens/);
+const server=fs.readFileSync(new URL('../backend/server.js',import.meta.url),'utf8');
+for(const x of ['/api/v1/parent/auth/login','/api/v1/parent/auth/logout','/api/v1/parent/auth/me','/api/v1/parent/reports','PARENT_NOT_VERIFIED_FOR_CHILD','REPORT_NOT_RELEASED']) assert.match(server,new RegExp(x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+const html=fs.readFileSync(new URL('../app/index.html',import.meta.url),'utf8');
+for(const x of ['PHASE 9 PARENT PORTAL','Parent Report Portal','not a diagnosis']) assert.match(html,new RegExp(x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')));
+console.log('AUTIBLOOM PHASE 9 integrity checks PASSED');

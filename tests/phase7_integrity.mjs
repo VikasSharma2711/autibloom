@@ -1,0 +1,11 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const csv=fs.readFileSync(new URL("../clinical/AUTIBLOOM_Scoring_Matrix_V1.csv",import.meta.url),"utf8").replace(/^\uFEFF/,"");
+assert.equal(csv.trim().split(/\r?\n/).length,122);
+const html=fs.readFileSync(new URL("../app/index.html",import.meta.url),"utf8");
+assert.match(html,/Question \$\{state\.index\+1\} of \$\{QUESTIONS\.length\}/);
+assert.match(html,/api\/v1\/assessments/);
+assert.match(html,/Complete assessment/);
+const server=fs.readFileSync(new URL("../backend/server.js",import.meta.url),"utf8");
+for(const x of ["/api/v1/auth/login","/api/v1/dashboard","/api/v1/children","/api/v1/assessments","/api/v1/assessments/:id/resume","/api/v1/assessments/:id/complete","validateResponses","scoreResponses"]) assert.ok(server.includes(x),x);
+console.log("AUTIBLOOM PHASE 7 INTEGRITY PASSED");

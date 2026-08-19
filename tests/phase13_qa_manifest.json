@@ -1,0 +1,31 @@
+{
+  "phase": "13.3",
+  "status": "code_level_qa",
+  "checks": [
+    "assessment_matrix_121",
+    "unique_question_ids",
+    "cumulative_artifacts",
+    "admin_authorization",
+    "role_allowlist",
+    "security_headers",
+    "production_security_config",
+    "zip_reopen_integrity",
+    "private_key_scan",
+    "email_verification_tokens",
+    "password_reset_tokens",
+    "resend_email_integration",
+    "email_auth_integrity"
+  ],
+  "deployment_gates": [
+    "HTTPS/TLS",
+    "trusted_authentication",
+    "PostgreSQL",
+    "secret_management",
+    "rate_limiting",
+    "privacy_legal_review",
+    "backups_monitoring",
+    "browser_device_acceptance"
+  ],
+  "auth_signup": "included",
+  "email_auth": "included"
+}

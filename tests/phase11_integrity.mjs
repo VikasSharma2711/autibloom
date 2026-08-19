@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const engine=fs.readFileSync(new URL('../backend/report_engine_v11.js',import.meta.url),'utf8');
+const server=fs.readFileSync(new URL('../backend/server.js',import.meta.url),'utf8');
+const preview=fs.readFileSync(new URL('../app/report-preview.html',import.meta.url),'utf8');
+const matrix=fs.readFileSync(new URL('../clinical/AUTIBLOOM_Scoring_Matrix_V1.csv',import.meta.url),'utf8').replace(/^\uFEFF/,'');
+assert.equal(matrix.trim().split(/\r?\n/).length-1,121);
+assert.match(engine,/buildProfessionalReportModel/);assert.match(engine,/renderProfessionalReportHtml/);
+assert.match(server,/\/api\/v1\/therapist\/reports\/\:id\/html/);assert.match(server,/\/api\/v1\/parent\/reports\/\:id\/html/);assert.match(server,/status='Released'/);
+assert.match(preview,/Print \/ Save as PDF/);console.log('AUTIBLOOM Phase 11 integrity checks PASSED');

@@ -1,0 +1,15 @@
+import assert from "node:assert/strict";
+import fs from "node:fs";
+const server=fs.readFileSync(new URL("../backend/server.js",import.meta.url),"utf8");
+const email=fs.readFileSync(new URL("../backend/email.js",import.meta.url),"utf8");
+const schema=fs.readFileSync(new URL("../database/phase13_3_email_auth.sql",import.meta.url),"utf8");
+const index=fs.readFileSync(new URL("../app/index.html",import.meta.url),"utf8");
+const parent=fs.readFileSync(new URL("../app/parent.html",import.meta.url),"utf8");
+const auth=fs.readFileSync(new URL("../app/auth.html",import.meta.url),"utf8");
+for(const x of ["/api/v1/auth/verify-email","/api/v1/auth/forgot-password","/api/v1/auth/reset-password","/api/v1/auth/resend-verification","EMAIL_NOT_VERIFIED","email_verified_at","password_reset_tokens","email_verification_tokens"]) assert(server.includes(x));
+for(const x of ["https://api.resend.com/emails","RESEND_API_KEY","EMAIL_FROM","APP_BASE_URL","sendVerificationEmail","sendPasswordResetEmail"]) assert(email.includes(x));
+for(const x of ["email_verification_tokens","password_reset_tokens","email_verified_at","THERAPIST","PARENT"]) assert(schema.includes(x));
+for(const x of ["Forgot password?","Resend verification","EMAIL_NOT_VERIFIED"]) assert(index.includes(x));
+for(const x of ["Forgot password?","Resend verification","EMAIL_NOT_VERIFIED"]) assert(parent.includes(x));
+for(const x of ["mode==='verify'","mode==='forgot'","mode==='reset'","mode==='resend'","Reset password"]) assert(auth.includes(x));
+console.log("PHASE 13.3 EMAIL AUTH INTEGRITY PASSED");

@@ -1,0 +1,5 @@
+import assert from "node:assert/strict";import fs from "node:fs";
+const m=fs.readFileSync(new URL("../clinical/AUTIBLOOM_Scoring_Matrix_V1.csv",import.meta.url),"utf8").replace(/^\uFEFF/,"");assert.equal(m.trim().split(/\r?\n/).length-1,121);
+const e=fs.readFileSync(new URL("../clinical/report_engine.js",import.meta.url),"utf8");for(const x of ["REPORT_VERSION","buildClinicalDraft","not a diagnosis"])assert.ok(e.includes(x));
+const s=fs.readFileSync(new URL("../backend/server.js",import.meta.url),"utf8");for(const x of ["PHASE8_REPORT_DRAFT","PHASE8_REPORT_GET","PHASE8_REPORT_UPDATE","PHASE8_REPORT_REVIEW","PHASE8_REPORT_RELEASE","REPORT_MUST_BE_REVIEWED_FIRST"])assert.ok(s.includes(x));
+const h=fs.readFileSync(new URL("../app/index.html",import.meta.url),"utf8");assert.ok(h.includes("AUTIBLOOM PHASE 8 — CLINICIAN REVIEW PANEL"));console.log("Phase 8 integrity tests passed");

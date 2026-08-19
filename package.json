@@ -1,0 +1,17 @@
+{
+  "name": "autibloom-phase13-3-production",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node backend/server.js",
+    "test": "cd backend && npm test"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "express": "^5.1.0",
+    "pg": "^8.16.0"
+  }
+}

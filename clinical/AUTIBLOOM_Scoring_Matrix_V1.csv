@@ -1,0 +1,122 @@
+﻿id,domain,pattern,functional_area,text,functional_impact_weight,scoring_direction,interpretation
+AB-AU-001,Auditory Processing,Sensitivity,Attention,The child becomes uncomfortable when several sounds occur at the same time.,1,frequency,screening_indicator_only
+AB-AU-002,Auditory Processing,Sensitivity,Participation,"Unexpected everyday sounds can cause the child to pause, withdraw or become distressed.",1,frequency,screening_indicator_only
+AB-AU-003,Auditory Processing,Filtering,Attention,Background conversations make it harder for the child to focus on a task.,1,frequency,screening_indicator_only
+AB-AU-004,Auditory Processing,Filtering,Learning,The child needs verbal information presented with fewer competing sounds.,1,frequency,screening_indicator_only
+AB-AU-005,Auditory Processing,Seeking,Regulation,The child deliberately creates sounds to stay engaged or regulated.,1,frequency,screening_indicator_only
+AB-AU-006,Auditory Processing,Seeking,Play,The child repeatedly explores objects because of the sounds they produce.,1,frequency,screening_indicator_only
+AB-AU-007,Auditory Processing,Low Registration,Communication,The child may not respond promptly when spoken to in an otherwise suitable environment.,1,frequency,screening_indicator_only
+AB-AU-008,Auditory Processing,Low Registration,Learning,The child needs additional cues before responding to spoken directions.,1,frequency,screening_indicator_only
+AB-AU-009,Auditory Processing,Functional Impact,School,Noise levels noticeably change the child's ability to participate in classroom activities.,2,frequency,screening_indicator_only
+AB-AU-010,Auditory Processing,Functional Impact,Community,Busy or noisy public environments reduce the child's participation.,2,frequency,screening_indicator_only
+AB-VI-011,Visual Processing,Sensitivity,Participation,Bright or visually intense environments make it harder for the child to remain comfortable.,1,frequency,screening_indicator_only
+AB-VI-012,Visual Processing,Sensitivity,Attention,Busy visual environments quickly compete with the child's attention.,1,frequency,screening_indicator_only
+AB-VI-013,Visual Processing,Seeking,Play,"The child repeatedly watches moving, reflective or visually changing objects.",1,frequency,screening_indicator_only
+AB-VI-014,Visual Processing,Seeking,Regulation,The child looks for visual stimulation when waiting or becoming under-engaged.,1,frequency,screening_indicator_only
+AB-VI-015,Visual Processing,Low Registration,Learning,The child may miss relevant visual information unless it is highlighted.,1,frequency,screening_indicator_only
+AB-VI-016,Visual Processing,Low Registration,ADL,The child may overlook items that are visible but mixed with other objects.,2,frequency,screening_indicator_only
+AB-VI-017,Visual Processing,Functional Impact,School,Visual clutter affects the child's ability to complete classroom work.,2,frequency,screening_indicator_only
+AB-VI-018,Visual Processing,Functional Impact,Community,Crowded visual environments make navigation or participation harder.,2,frequency,screening_indicator_only
+AB-TA-019,Tactile Processing,Sensitivity,Grooming,"The child becomes uncomfortable when hair, face, nails or skin are handled during care routines.",2,frequency,screening_indicator_only
+AB-TA-020,Tactile Processing,Sensitivity,Clothing,"Certain clothing materials, seams or labels are difficult for the child to tolerate.",1,frequency,screening_indicator_only
+AB-TA-021,Tactile Processing,Sensitivity,Play,The child avoids particular messy or unfamiliar textures.,1,frequency,screening_indicator_only
+AB-TA-022,Tactile Processing,Sensitivity,Social,Unexpected physical contact can cause a strong response.,1,frequency,screening_indicator_only
+AB-TA-023,Tactile Processing,Avoiding,ADL,The child attempts to leave or reduce activities that involve uncomfortable touch.,2,frequency,screening_indicator_only
+AB-TA-024,Tactile Processing,Seeking,Play,The child repeatedly touches or explores surfaces for tactile feedback.,1,frequency,screening_indicator_only
+AB-TA-025,Tactile Processing,Seeking,Regulation,Firm pressure or tactile exploration appears to help the child become organised.,1,frequency,screening_indicator_only
+AB-TA-026,Tactile Processing,Low Registration,Safety,"The child may not notice minor contact, mess or changes on the skin.",2,frequency,screening_indicator_only
+AB-TA-027,Tactile Processing,Functional Impact,Self-care,"Tactile responses interfere with dressing, grooming or hygiene.",2,frequency,screening_indicator_only
+AB-VE-028,Vestibular / Movement,Sensitivity,Movement,"The child becomes uneasy when movement changes speed, direction or body position.",1,frequency,screening_indicator_only
+AB-VE-029,Vestibular / Movement,Avoiding,Play,"The child avoids activities that involve climbing, swinging, jumping or feet leaving the ground.",1,frequency,screening_indicator_only
+AB-VE-030,Vestibular / Movement,Seeking,Regulation,"The child repeatedly seeks rocking, spinning, jumping or other movement input.",1,frequency,screening_indicator_only
+AB-VE-031,Vestibular / Movement,Seeking,Attention,Movement appears necessary for the child to remain engaged in some activities.,1,frequency,screening_indicator_only
+AB-VE-032,Vestibular / Movement,Low Registration,Motor,The child may need stronger movement cues to notice changes in body position.,1,frequency,screening_indicator_only
+AB-VE-033,Vestibular / Movement,Functional Impact,Safety,Movement-seeking or movement-avoidant behaviour affects safe participation.,2,frequency,screening_indicator_only
+AB-PR-034,Proprioceptive / Body Awareness,Seeking,Regulation,"The child frequently seeks pushing, pulling, carrying, jumping or resistance activities.",1,frequency,screening_indicator_only
+AB-PR-035,Proprioceptive / Body Awareness,Seeking,Play,The child prefers activities that provide strong muscle or joint feedback.,1,frequency,screening_indicator_only
+AB-PR-036,Proprioceptive / Body Awareness,Body Awareness,Motor,The child has difficulty judging where their body is in relation to objects.,1,frequency,screening_indicator_only
+AB-PR-037,Proprioceptive / Body Awareness,Body Awareness,ADL,The child may use too much or too little force during everyday tasks.,2,frequency,screening_indicator_only
+AB-PR-038,Proprioceptive / Body Awareness,Body Awareness,Fine Motor,The child has difficulty grading force when handling tools or materials.,1,frequency,screening_indicator_only
+AB-PR-039,Proprioceptive / Body Awareness,Low Registration,Safety,The child may not notice body position or contact with the environment.,2,frequency,screening_indicator_only
+AB-PR-040,Proprioceptive / Body Awareness,Functional Impact,Participation,Body-awareness differences interfere with coordinated movement or self-care.,1,frequency,screening_indicator_only
+AB-OR-041,Oral / Feeding,Sensitivity,Feeding,Certain food textures make the child reluctant to eat or try a food.,2,frequency,screening_indicator_only
+AB-OR-042,Oral / Feeding,Sensitivity,Feeding,Strong tastes or smells can reduce willingness to eat.,2,frequency,screening_indicator_only
+AB-OR-043,Oral / Feeding,Sensitivity,Grooming,Oral-care routines such as tooth brushing are difficult to tolerate.,2,frequency,screening_indicator_only
+AB-OR-044,Oral / Feeding,Seeking,Regulation,"The child seeks chewing or oral input when excited, tired or under-engaged.",1,frequency,screening_indicator_only
+AB-OR-045,Oral / Feeding,Seeking,Play,The child frequently mouths objects beyond what would be expected for their developmental stage.,1,frequency,screening_indicator_only
+AB-OR-046,Oral / Feeding,Avoiding,Feeding,The child limits food choices because of sensory characteristics.,2,frequency,screening_indicator_only
+AB-OR-047,Oral / Feeding,Functional Impact,Mealtime,Sensory responses create significant difficulty during family meals.,2,frequency,screening_indicator_only
+AB-OL-048,Olfactory Processing,Sensitivity,Participation,Particular environmental smells cause the child to withdraw or become uncomfortable.,1,frequency,screening_indicator_only
+AB-OL-049,Olfactory Processing,Sensitivity,Feeding,Food smells can affect the child's willingness to remain near or eat food.,2,frequency,screening_indicator_only
+AB-OL-050,Olfactory Processing,Seeking,Exploration,"The child repeatedly smells objects, foods or materials.",1,frequency,screening_indicator_only
+AB-OL-051,Olfactory Processing,Low Registration,Safety,The child may not notice strong odours that would normally provide useful information.,2,frequency,screening_indicator_only
+AB-OL-052,Olfactory Processing,Functional Impact,Community,Environmental smells can limit participation in public or unfamiliar places.,2,frequency,screening_indicator_only
+AB-IN-053,Interoception,Low Registration,ADL,The child may not recognise hunger until it becomes pronounced.,2,frequency,screening_indicator_only
+AB-IN-054,Interoception,Low Registration,ADL,The child may not recognise thirst without reminders.,2,frequency,screening_indicator_only
+AB-IN-055,Interoception,Low Registration,Toileting,The child needs support to notice or respond to toileting signals.,2,frequency,screening_indicator_only
+AB-IN-056,Interoception,Low Registration,Regulation,The child may not recognise early body signs that they are becoming overwhelmed.,1,frequency,screening_indicator_only
+AB-IN-057,Interoception,Awareness,Emotion,The child has difficulty describing physical signs associated with emotions.,1,frequency,screening_indicator_only
+AB-IN-058,Interoception,Functional Impact,Self-care,Reduced awareness of body signals affects independence in daily routines.,2,frequency,screening_indicator_only
+AB-PX-059,Praxis / Motor Planning,Planning,Motor,The child needs extra practice to learn an unfamiliar movement sequence.,1,frequency,screening_indicator_only
+AB-PX-060,Praxis / Motor Planning,Planning,Play,The child has difficulty figuring out how to use new playground equipment.,1,frequency,screening_indicator_only
+AB-PX-061,Praxis / Motor Planning,Imitation,Motor,The child finds unfamiliar body movements difficult to copy.,1,frequency,screening_indicator_only
+AB-PX-062,Praxis / Motor Planning,Sequencing,ADL,The child needs support to organise the steps of a multi-step self-care routine.,2,frequency,screening_indicator_only
+AB-PX-063,Praxis / Motor Planning,Adaptation,Play,The child finds it difficult to change a familiar movement when the situation changes.,1,frequency,screening_indicator_only
+AB-PX-064,Praxis / Motor Planning,Functional Impact,School,Motor-planning difficulties affect participation in practical classroom tasks.,2,frequency,screening_indicator_only
+AB-PO-065,Postural Control,Endurance,School,The child tires or loses posture during sustained seated activities.,2,frequency,screening_indicator_only
+AB-PO-066,Postural Control,Stability,Motor,The child has difficulty maintaining a stable trunk during reaching or movement.,1,frequency,screening_indicator_only
+AB-PO-067,Postural Control,Stability,ADL,The child needs extra support to maintain position during self-care.,2,frequency,screening_indicator_only
+AB-PO-068,Postural Control,Coordination,Motor,The child's movements become less efficient when postural demands increase.,1,frequency,screening_indicator_only
+AB-PO-069,Postural Control,Functional Impact,Participation,"Postural demands reduce participation in learning, play or daily activities.",1,frequency,screening_indicator_only
+AB-AR-070,Attention / Arousal,Over-responsivity,Attention,The child becomes overly alert when sensory demands increase.,1,frequency,screening_indicator_only
+AB-AR-071,Attention / Arousal,Under-arousal,Attention,The child is slow to become ready for activities that require sustained attention.,1,frequency,screening_indicator_only
+AB-AR-072,Attention / Arousal,Modulation,Learning,The child's attention changes substantially with environmental sensory conditions.,1,frequency,screening_indicator_only
+AB-AR-073,Attention / Arousal,Modulation,Transition,The child needs support to shift from a highly active state to a calmer activity.,1,frequency,screening_indicator_only
+AB-AR-074,Attention / Arousal,Functional Impact,School,Arousal differences interfere with classroom learning or task completion.,2,frequency,screening_indicator_only
+AB-SR-075,Self-Regulation,Modulation,Emotion,The child becomes overwhelmed when several demands occur together.,1,frequency,screening_indicator_only
+AB-SR-076,Self-Regulation,Modulation,Transition,The child has difficulty recovering after a sensory or emotional overload.,1,frequency,screening_indicator_only
+AB-SR-077,Self-Regulation,Seeking,Regulation,The child uses repetitive movement or sensory behaviours to calm themselves.,1,frequency,screening_indicator_only
+AB-SR-078,Self-Regulation,Avoiding,Regulation,The child attempts to escape situations when sensory demands become too high.,1,frequency,screening_indicator_only
+AB-SR-079,Self-Regulation,Functional Impact,Family,Regulation difficulties significantly affect everyday family routines.,1,frequency,screening_indicator_only
+AB-SS-080,Sensory Seeking,Seeking,Movement,The child actively looks for additional movement throughout the day.,1,frequency,screening_indicator_only
+AB-SS-081,Sensory Seeking,Seeking,Touch,"The child seeks strong touch, pressure or physical contact.",1,frequency,screening_indicator_only
+AB-SS-082,Sensory Seeking,Seeking,Sound,The child seeks interesting or repetitive sounds.,1,frequency,screening_indicator_only
+AB-SS-083,Sensory Seeking,Seeking,Visual,The child seeks visually stimulating objects or activities.,1,frequency,screening_indicator_only
+AB-SS-084,Sensory Seeking,Seeking,Oral,The child seeks strong oral input such as chewing.,1,frequency,screening_indicator_only
+AB-SS-085,Sensory Seeking,Seeking,Proprioception,The child seeks heavy work or resistance activities.,1,frequency,screening_indicator_only
+AB-SS-086,Sensory Seeking,Functional Impact,Participation,Sensory-seeking behaviour interferes with staying with expected activities.,1,frequency,screening_indicator_only
+AB-SA-087,Sensory Avoiding / Sensitivity,Avoiding,Participation,The child attempts to reduce exposure to sensory experiences they find uncomfortable.,1,frequency,screening_indicator_only
+AB-SA-088,Sensory Avoiding / Sensitivity,Avoiding,Transition,The child needs preparation or choice before challenging sensory activities.,1,frequency,screening_indicator_only
+AB-SA-089,Sensory Avoiding / Sensitivity,Avoiding,Community,The child avoids particular environments because the sensory load feels overwhelming.,2,frequency,screening_indicator_only
+AB-SA-090,Sensory Avoiding / Sensitivity,Sensitivity,Emotion,The child shows a strong emotional response to sensory experiences.,1,frequency,screening_indicator_only
+AB-SA-091,Sensory Avoiding / Sensitivity,Sensitivity,Participation,Sensory discomfort causes the child to stop or reduce an activity.,1,frequency,screening_indicator_only
+AB-SA-092,Sensory Avoiding / Sensitivity,Functional Impact,Family,Sensory avoidance changes family routines or outings.,1,frequency,screening_indicator_only
+AB-LR-093,Low Registration,Low Registration,Communication,The child takes longer to notice information that is presented to them.,1,frequency,screening_indicator_only
+AB-LR-094,Low Registration,Low Registration,Learning,The child needs additional cues to notice task-relevant information.,1,frequency,screening_indicator_only
+AB-LR-095,Low Registration,Low Registration,Touch,The child may not notice minor contact or changes on the body.,1,frequency,screening_indicator_only
+AB-LR-096,Low Registration,Low Registration,Movement,The child may need additional movement cues to become aware of body position.,1,frequency,screening_indicator_only
+AB-LR-097,Low Registration,Functional Impact,Safety,Delayed noticing can affect safe or timely responses.,2,frequency,screening_indicator_only
+AB-FA-098,Functional Participation / ADL,Dressing,ADL,Sensory responses interfere with getting dressed independently.,2,frequency,screening_indicator_only
+AB-FA-099,Functional Participation / ADL,Grooming,ADL,"Sensory responses interfere with bathing, hair care or nail care.",2,frequency,screening_indicator_only
+AB-FA-100,Functional Participation / ADL,Oral Care,ADL,Sensory responses interfere with tooth brushing or other oral-care routines.,2,frequency,screening_indicator_only
+AB-FA-101,Functional Participation / ADL,Feeding,ADL,Sensory responses interfere with eating a sufficiently varied range of foods.,2,frequency,screening_indicator_only
+AB-FA-102,Functional Participation / ADL,Toileting,ADL,Sensory or body-awareness differences interfere with toileting routines.,2,frequency,screening_indicator_only
+AB-FA-103,Functional Participation / ADL,Sleep,ADL,Sensory regulation difficulties interfere with settling or maintaining sleep routines.,2,frequency,screening_indicator_only
+AB-FA-104,Functional Participation / ADL,School,School,Sensory needs interfere with participation in classroom routines.,2,frequency,screening_indicator_only
+AB-FA-105,Functional Participation / ADL,Play,Play,Sensory needs interfere with age-appropriate play.,1,frequency,screening_indicator_only
+AB-FA-106,Functional Participation / ADL,Social,Social,Sensory needs interfere with participation with peers or family.,1,frequency,screening_indicator_only
+AB-FA-107,Functional Participation / ADL,Community,Community,Sensory needs interfere with community outings or unfamiliar environments.,2,frequency,screening_indicator_only
+AB-SL-108,Sleep / Arousal,Sensitivity,Sleep,Environmental sounds or sensations make it difficult for the child to settle.,2,frequency,screening_indicator_only
+AB-SL-109,Sleep / Arousal,Seeking,Sleep,"The child seeks movement, pressure or repetitive input before settling.",2,frequency,screening_indicator_only
+AB-SL-110,Sleep / Arousal,Modulation,Sleep,The child's daytime sensory regulation appears to affect bedtime readiness.,2,frequency,screening_indicator_only
+AB-SL-111,Sleep / Arousal,Functional Impact,Family,Sleep-related sensory difficulties affect family routines.,1,frequency,screening_indicator_only
+AB-SO-112,Social Sensory Participation,Sensitivity,Social,Close proximity or unexpected contact makes social participation difficult.,1,frequency,screening_indicator_only
+AB-SO-113,Social Sensory Participation,Sensitivity,Group,Busy group settings can overwhelm the child.,1,frequency,screening_indicator_only
+AB-SO-114,Social Sensory Participation,Modulation,Social,Sensory load affects the child's ability to interact with others.,1,frequency,screening_indicator_only
+AB-SO-115,Social Sensory Participation,Avoiding,Social,The child avoids particular social environments because they feel overwhelming.,1,frequency,screening_indicator_only
+AB-SO-116,Social Sensory Participation,Functional Impact,Play,Sensory differences reduce cooperative or shared play.,1,frequency,screening_indicator_only
+AB-EN-117,Environmental Adaptation,Environmental,School,The child participates better when distracting sensory input is reduced.,2,frequency,screening_indicator_only
+AB-EN-118,Environmental Adaptation,Environmental,School,The child benefits from planned movement opportunities during longer tasks.,2,frequency,screening_indicator_only
+AB-EN-119,Environmental Adaptation,Environmental,Home,The child benefits from a predictable sensory routine.,1,frequency,screening_indicator_only
+AB-EN-120,Environmental Adaptation,Environmental,Community,The child benefits from advance preparation for busy environments.,2,frequency,screening_indicator_only
+AB-EN-121,Environmental Adaptation,Functional Impact,Participation,Environmental modifications make a noticeable difference in the child's participation.,1,frequency,screening_indicator_only

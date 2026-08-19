@@ -1,0 +1,2 @@
+# AUTIBLOOM Phase 8
+Clinical report layer: structured score summary, clinician-editable report, parent-friendly summary, recommendations, home program, notes, audit-ready lifecycle Draft → Reviewed → Released. The report engine is explicitly non-diagnostic and does not invent clinical conclusions. A report cannot be released until reviewed by the therapist.

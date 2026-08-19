@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>AUTIBLOOM — Account Security</title>
+<style>
+body{margin:0;background:#f6f8fb;color:#172033;font-family:system-ui,-apple-system,Segoe UI,sans-serif}.wrap{max-width:560px;margin:60px auto;padding:20px}.card{background:#fff;border:1px solid #e5eaf1;border-radius:18px;padding:26px;box-shadow:0 8px 30px #0f172a0a}h1{margin:0 0 4px}.muted{color:#64748b;font-size:14px}.input{width:100%;box-sizing:border-box;padding:12px;border:1px solid #d7dee8;border-radius:10px;margin:7px 0 14px}.btn{border:0;border-radius:10px;padding:11px 15px;font-weight:750;cursor:pointer}.primary{background:#172033;color:#fff}.light{background:#eef2f7;color:#172033}.hidden{display:none}.status{padding:12px;border-radius:10px;background:#eef2f7;margin-top:14px}.success{background:#ecfdf5;color:#166534}.error{background:#fef2f2;color:#991b1b}.links{display:flex;gap:12px;flex-wrap:wrap;margin-top:16px;font-size:14px}
+</style>
+</head>
+<body><main class="wrap"><div class="card">
+<h1>AUTIBLOOM</h1><p class="muted">Secure account access</p>
+<div id="verifyPanel" class="hidden"><h2>Verify your email</h2><p id="verifyText" class="muted">Checking your verification link…</p><div id="verifyStatus" class="status"></div></div>
+<div id="forgotPanel" class="hidden"><h2>Forgot password?</h2><p class="muted">Enter your account email. If the account exists and is eligible, we’ll send a password-reset link.</p><label>Account</label><select id="forgotAccount" class="input"><option value="therapist">Therapist</option><option value="parent">Parent</option></select><label>Email</label><input id="forgotEmail" class="input" type="email" autocomplete="email"><button id="forgotBtn" class="btn primary">Send reset link</button><div id="forgotStatus" class="status hidden"></div></div>
+<div id="resendPanel" class="hidden"><h2>Resend verification email</h2><p class="muted">Use the email you registered with.</p><label>Account</label><select id="resendAccount" class="input"><option value="therapist">Therapist</option><option value="parent">Parent</option></select><label>Email</label><input id="resendEmail" class="input" type="email" autocomplete="email"><button id="resendBtn" class="btn primary">Resend verification</button><div id="resendStatus" class="status hidden"></div></div>
+<div id="resetPanel" class="hidden"><h2>Create a new password</h2><p class="muted">Choose a strong password. Your other active sessions will be signed out.</p><label>New password</label><input id="resetPassword" class="input" type="password" autocomplete="new-password"><label>Confirm password</label><input id="resetConfirm" class="input" type="password" autocomplete="new-password"><p class="muted">At least 12 characters with uppercase, lowercase, number and special character.</p><button id="resetBtn" class="btn primary">Reset password</button><div id="resetStatus" class="status hidden"></div></div>
+<div id="homePanel"><h2>Account help</h2><p class="muted">Choose an option from your sign-in page or use the links below.</p></div>
+<div class="links"><a href="/">Therapist sign in</a><a href="/parent.html">Parent portal</a></div>
+</div></main>
+<script>
+const qs=new URLSearchParams(location.search),mode=qs.get('mode')||'home',account=qs.get('account')==='parent'?'parent':'therapist',token=qs.get('token')||'';
+const $=id=>document.getElementById(id);
+async function api(path,opt={}){const r=await fetch(path,{credentials:'include',headers:{'Content-Type':'application/json',...(opt.headers||{})},...opt});let d={};try{d=await r.json()}catch{}if(!r.ok)throw Error(d.error||'REQUEST_FAILED');return d}
+function show(id){$(id).classList.remove('hidden')}
+function status(id,text,good=false){$(id).textContent=text;$(id).classList.remove('hidden','success','error');$(id).classList.add(good?'success':'error')}
+if(mode==='verify'){
+ show('verifyPanel'); $('homePanel').classList.add('hidden');
+ if(!token){status('verifyStatus','This verification link is missing its token.');}
+ else {(async()=>{try{const d=await api(`/api/v1/${account==='parent'?'parent/auth/verify-email':'auth/verify-email'}?token=${encodeURIComponent(token)}`);$('verifyText').textContent='Your email address has been verified successfully.';status('verifyStatus','Email verified. You can now sign in.',true)}catch(e){$('verifyText').textContent='We could not verify this email address.';status('verifyStatus',({INVALID_OR_EXPIRED_VERIFICATION_TOKEN:'The link is invalid or has expired. Please request a new verification email.'}[e.message]||'The verification link could not be completed.'))}})()}
+}
+if(mode==='forgot'){show('forgotPanel');$('homePanel').classList.add('hidden');$('forgotAccount').value=account}
+if(mode==='resend'){show('resendPanel');$('homePanel').classList.add('hidden');$('resendAccount').value=account}
+if(mode==='reset'){
+ show('resetPanel');$('homePanel').classList.add('hidden');
+ $('resetBtn').onclick=async()=>{const a=$('resetPassword').value,c=$('resetConfirm').value;if(a!==c){status('resetStatus','Passwords do not match.');return}try{await api(`/api/v1/${account==='parent'?'parent/auth/reset-password':'auth/reset-password'}`,{method:'POST',body:JSON.stringify({token,new_password:a})});status('resetStatus','Password reset successfully. You can now sign in.',true);$('resetBtn').disabled=true}catch(e){status('resetStatus',({WEAK_PASSWORD:'Password must be 12+ characters and include uppercase, lowercase, number and special character.',INVALID_OR_EXPIRED_RESET_TOKEN:'This reset link is invalid, expired, or already used.'}[e.message]||'Unable to reset the password. Please request a new link.'))}}
+}
+$('forgotBtn').onclick=async()=>{try{await api(`/api/v1/${$('forgotAccount').value==='parent'?'parent/auth/forgot-password':'auth/forgot-password'}`,{method:'POST',body:JSON.stringify({email:$('forgotEmail').value})});status('forgotStatus','If the account exists and can receive a reset email, a link has been sent. Please check your inbox and spam folder.',true)}catch(e){status('forgotStatus','Please enter a valid email address and try again.')}};
+$('resendBtn').onclick=async()=>{try{await api(`/api/v1/${$('resendAccount').value==='parent'?'parent/auth/resend-verification':'auth/resend-verification'}`,{method:'POST',body:JSON.stringify({email:$('resendEmail').value})});status('resendStatus','If the account needs verification, a new email has been sent. Check your inbox and spam folder.',true)}catch(e){status('resendStatus','Please enter a valid email address and try again.')}};
+</script></body></html>
